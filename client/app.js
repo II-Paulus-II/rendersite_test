@@ -6,8 +6,10 @@ const myApi = "https://testrenderserver.onrender.com/message";
 
 async function getMessage() {
   const response = await fetch(myApi);
+  console.log(response);
 
   const meMessage = await response.json();
+  console.log(meMessage);
 
   const p = document.getElementById("message");
   p.textContent = meMessage.message; //message is the value inside the object returned.
@@ -23,7 +25,8 @@ async function handleSubmitMessageForm(event) {
   // do something with the form data here
   const formData = new FormData(messageForm);
   const message = formData.get("message");
-
+  
+  //response stuff
   const myFormResponse = await fetch(myApi, {
     method: "POST", // This is where we set the POST HTTP verb
     headers: {
@@ -31,7 +34,10 @@ async function handleSubmitMessageForm(event) {
     },
     body: JSON.stringify({ message }),
   });
-  console.log(myFormResponse);
+
+  const reply = await myFormResponse.json();
+
+  console.log(reply.message);
 }
 
 messageForm.addEventListener("submit", handleSubmitMessageForm);

@@ -11,6 +11,10 @@ const message = {
   message: "I am your father"
 }
 
+const postMessage = {
+  message: "Message received"
+};
+
 //endpoint (s)
 
 app.get("/message", function (request, response) {
@@ -19,7 +23,7 @@ app.get("/message", function (request, response) {
 
 app.post("/message", (req, res) => {
   console.log("req.body", req.body);
-  res.json({ status: "Message received!" });
+  res.json(postMessage);
 });
 
 
