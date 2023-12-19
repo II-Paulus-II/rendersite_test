@@ -1,0 +1,28 @@
+notes:
+
+render.com 
+
+use github account for it as with vercel
+
+ git init etc 
+
+on render
+
+new and then
+
+static site first 
+
+use vite in client folder first 
+it i
+
+
+Deploy server as Web service
+Server side : web Service
+
+root directory is Server
+
+runtime node
+
+build command : npm i 
+
+start command : node server
