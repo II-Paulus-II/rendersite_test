@@ -2,7 +2,7 @@ console.log ("987asoca012");
 
 // Call my api
 
-const myApi = "http://localhost:8080/message";
+const myApi = "https://testrenderserver.onrender.com/message";
 
 async function getMessage() {
   const response = await fetch(myApi);
