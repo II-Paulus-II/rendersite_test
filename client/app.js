@@ -17,7 +17,7 @@ getMessage();
 
 const messageForm = document.querySelector("#messageForm");
 
-function handleSubmitMessageForm(event) {
+async function handleSubmitMessageForm(event) {
   event.preventDefault();
   console.log("Form submitted!");
   // do something with the form data here
