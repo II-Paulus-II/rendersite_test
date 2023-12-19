@@ -24,13 +24,14 @@ function handleSubmitMessageForm(event) {
   const formData = new FormData(messageForm);
   const message = formData.get("message");
 
-  fetch(myApi, {
+  const myFormResponse = await fetch(myApi, {
     method: "POST", // This is where we set the POST HTTP verb
     headers: {
       "Content-Type": "application/json", // This tells the server we're sending stringified JSON data
     },
     body: JSON.stringify({ message }),
   });
+  console.log(myFormResponse);
 }
 
 messageForm.addEventListener("submit", handleSubmitMessageForm);
