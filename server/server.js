@@ -17,6 +17,12 @@ app.get("/message", function (request, response) {
   response.json(message);
 });
 
+app.post("/messages", express.json(), (req, res) => {
+  console.log("req.body", req.body);
+  res.json({ status: "Message received!" });
+});
+
+
 // start the server
 
 app.listen(8080, function () {
